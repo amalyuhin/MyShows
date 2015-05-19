@@ -26,6 +26,15 @@ public class Show {
     @SerializedName("showStatus")
     private String status;
 
+    @SerializedName("watchStatus")
+    private String watchStatus;
+
+    @SerializedName("watchedEpisodes")
+    private int watchedEpisodes;
+
+    @SerializedName("totalEpisodes")
+    private int totalEpisodes;
+
     @SerializedName("rating")
     private Double rating;
 
@@ -96,6 +105,30 @@ public class Show {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getWatchStatus() {
+        return watchStatus;
+    }
+
+    public void setWatchStatus(String watchStatus) {
+        this.watchStatus = watchStatus;
+    }
+
+    public int getWatchedEpisodes() {
+        return watchedEpisodes;
+    }
+
+    public void setWatchedEpisodes(int watchedEpisodes) {
+        this.watchedEpisodes = watchedEpisodes;
+    }
+
+    public int getTotalEpisodes() {
+        return totalEpisodes;
+    }
+
+    public void setTotalEpisodes(int totalEpisodes) {
+        this.totalEpisodes = totalEpisodes;
     }
 
     public List<Episode> getEpisodes() {

@@ -1,10 +1,9 @@
 package com.amalyuhin.myshows.api;
 
-import retrofit.Callback;
 import retrofit.client.Response;
-import retrofit.http.Field;
 import retrofit.http.GET;
-import retrofit.http.POST;
+import retrofit.http.Query;
+import rx.Observable;
 
 /**
  * Created by amalyuhin on 01.12.2014.
@@ -12,7 +11,6 @@ import retrofit.http.POST;
 public interface ApiService {
 
     @GET("/profile/login")
-    public void login(@Field("login") String login, @Field("password") String password, Callback<Response> callback);
-
+    public Observable<Response> login(@Query("login") String login, @Query("password") String password);
 
 }
